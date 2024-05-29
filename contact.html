@@ -17,6 +17,17 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="./js/sendEmail.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init('VtcIVCJn_-XaAGPig');
+      })();
+    </script>
     <title>Global Grad Consultancy</title>
   </head>
 
@@ -95,6 +106,7 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <input
+                        id="cfname"
                         type="text"
                         class="form-control"
                         placeholder="First Name"
@@ -104,6 +116,7 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <input
+                        id="clname"
                         type="text"
                         class="form-control"
                         placeholder="Last Name"
@@ -113,6 +126,7 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <input
+                        id="cemail"
                         type="text"
                         class="form-control"
                         placeholder="Email"
@@ -122,6 +136,7 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <input
+                        id="cphone"
                         type="text"
                         class="form-control"
                         placeholder="Phone Number"
@@ -133,6 +148,7 @@
                   <div class="col-md-12">
                     <div class="form-group">
                       <textarea
+                        id="cmessage"
                         class="form-control"
                         placeholder="Message"
                       ></textarea>
@@ -144,6 +160,7 @@
                         type="submit"
                         value="Submit"
                         class="btn btn-outline-danger btn-block"
+                        onclick="sendMail(event)"
                       />
                     </div>
                   </div>
@@ -210,6 +227,12 @@
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
       integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
       crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/6.0.0/bootbox.min.js"
+      integrity="sha512-oVbWSv2O4y1UzvExJMHaHcaib4wsBMS5tEP3/YkMP6GmkwRJAa79Jwsv+Y/w7w2Vb/98/Xhvck10LyJweB8Jsw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     ></script>
 
     <script>
